@@ -1,0 +1,14 @@
+# Ignore bin and obj folders
+**/bin/
+**/obj/
+
+# Ignore user-specific files
+*.suo
+*.user
+*.userosaur
+*.sdf
+*.cache
+
+# Ignore Visual Studio cache and temporary files
+.vs/
+*.vs
