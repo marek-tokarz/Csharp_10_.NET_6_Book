@@ -18,13 +18,13 @@ if (assembly == null)
 foreach (AssemblyName name in assembly.GetReferencedAssemblies())
 {
     // load each assembly in order to read details about that assembly
-    var a = Assembly.Load(name);
+    var A = Assembly.Load(name);
 
     // variable to sum all the methods
     int numberOfMethods = 0;
 
     // look to check all types from assembly
-    foreach (var t in a.DefinedTypes)
+    foreach (var t in A.DefinedTypes)
     {
         // sum a number of methods
         numberOfMethods += t.GetMethods().Count();
@@ -34,7 +34,7 @@ foreach (AssemblyName name in assembly.GetReferencedAssemblies())
     Console.WriteLine(
         "In ASSEMBLY {0} there is {1} of types and {2} of methods.",
         arg0: name.Name,
-        arg1: a.DefinedTypes.Count(),
+        arg1: A.DefinedTypes.Count(),
         arg2: numberOfMethods
     );
 }
@@ -66,5 +66,33 @@ Console.WriteLine(
 Console.WriteLine(
     $"Type 'decimal' has {sizeof(decimal)} bytes and can store numbers of range from: {decimal.MinValue} to {decimal.MaxValue}."
 );
+
+// comparing types: double and decimal
+
+Console.WriteLine("Double");
+double a = 0.1;
+double b = 0.2;
+
+if (a + b == 0.3)
+{
+    Console.WriteLine($"{a} + {b} equals 0.3");
+}
+else
+{
+    Console.WriteLine($"{a} + {b} not equals 0.3");
+}
+
+decimal c = 0.1M;
+decimal d = 0.2M;
+
+Console.WriteLine("Decimal");
+if (c + d == 0.3M)
+{
+    Console.WriteLine($"{c} + {d} equals 0.3");
+}
+else
+{
+    Console.WriteLine($"{c} + {d} not equals 0.3");
+}
 
 Console.ReadKey();
