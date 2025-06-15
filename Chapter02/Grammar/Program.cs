@@ -2,6 +2,11 @@
 //#error version
 using System.Reflection;
 
+// declaration of unused variables
+// with types from external assemblies
+System.Data.DataSet ds;
+HttpClient client;
+
 Assembly? assembly = Assembly.GetEntryAssembly();
 
 if (assembly == null)
