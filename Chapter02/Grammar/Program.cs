@@ -56,4 +56,15 @@ int hexadecimalNotation = 0x_001E_8480;
 Console.WriteLine($"{decimalNotation == binaryNotation}");
 Console.WriteLine($"{decimalNotation == hexadecimalNotation}");
 
+// operator sizeof(), MinValue, MaxValue
+Console.WriteLine(
+    $"Type 'int' has {sizeof(int)} bytes and can store numbers of range from: {int.MinValue} to {int.MaxValue}."
+);
+Console.WriteLine(
+    $"Type 'double' has {sizeof(double)} bytes and can store numbers of range from: {double.MinValue} to {double.MaxValue}."
+);
+Console.WriteLine(
+    $"Type 'decimal' has {sizeof(decimal)} bytes and can store numbers of range from: {decimal.MinValue} to {decimal.MaxValue}."
+);
+
 Console.ReadKey();
