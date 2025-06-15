@@ -43,4 +43,8 @@ foreach (AssemblyName name in assembly.GetReferencedAssemblies())
 double heightInMeters = 1.88;
 Console.WriteLine($"Variable {nameof(heightInMeters)} has value {heightInMeters}");
 
+// literal string sequences - with: '@'
+// example with a file path
+string filePath = @"C:\tvs\sony\bravia.txt";
+
 Console.ReadKey();
