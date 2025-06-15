@@ -39,4 +39,8 @@ foreach (AssemblyName name in assembly.GetReferencedAssemblies())
     );
 }
 
+// nameof
+double heightInMeters = 1.88;
+Console.WriteLine($"Variable {nameof(heightInMeters)} has value {heightInMeters}");
+
 Console.ReadKey();
